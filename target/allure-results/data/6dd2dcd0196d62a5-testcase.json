@@ -1,0 +1,92 @@
+{
+  "uid" : "6dd2dcd0196d62a5",
+  "name" : "getUserDataByPageTest",
+  "title" : "Get user data by page test",
+  "time" : {
+    "start" : 1518017973826,
+    "stop" : 1518017982189,
+    "duration" : 8363
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 3
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "9efbf35b335c2754",
+    "name" : "Surefire suite : Surefire test",
+    "title" : "Surefire suite : Surefire test"
+  },
+  "steps" : [ {
+    "name" : "info[Test: class org.testng.internal.TestResult getUserDataByPageTest is started]",
+    "title" : "Info [Test: class org.testng.internal.TestResult getUserDataByPageTest is started]",
+    "time" : {
+      "start" : 1518017973784,
+      "stop" : 1518017973792,
+      "duration" : 8
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "info[Verify user data is present on page в„–: 3]",
+    "title" : "Info [Verify user data is present on page в„–: 3]",
+    "time" : {
+      "start" : 1518017973827,
+      "stop" : 1518017973828,
+      "duration" : 1
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "info[Test: class org.testng.internal.TestResult getUserDataByPageTest PASSED]",
+    "title" : "Info [Test: class org.testng.internal.TestResult getUserDataByPageTest PASSED]",
+    "time" : {
+      "start" : 1518017982183,
+      "stop" : 1518017982184,
+      "duration" : 1
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "Surefire suite : Surefire test"
+  }, {
+    "name" : "thread",
+    "value" : "11616@EPUALVIW0287.main(1)"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  }, {
+    "name" : "host",
+    "value" : "EPUALVIW0287"
+  }, {
+    "name" : "framework",
+    "value" : "TestNG"
+  }, {
+    "name" : "suite-title",
+    "value" : "Surefire suite : Surefire test"
+  } ],
+  "parameters" : [ ]
+}

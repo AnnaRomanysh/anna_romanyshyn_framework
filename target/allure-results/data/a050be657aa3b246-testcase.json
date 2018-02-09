@@ -1,0 +1,92 @@
+{
+  "uid" : "a050be657aa3b246",
+  "name" : "verifyUserDeleteById",
+  "title" : "Verify user delete by id",
+  "time" : {
+    "start" : 1518017985037,
+    "stop" : 1518017985408,
+    "duration" : 371
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 3
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "9efbf35b335c2754",
+    "name" : "Surefire suite : Surefire test",
+    "title" : "Surefire suite : Surefire test"
+  },
+  "steps" : [ {
+    "name" : "info[Test: class org.testng.internal.TestResult verifyUserDeleteById is started]",
+    "title" : "Info [Test: class org.testng.internal.TestResult verifyUserDeleteById is started]",
+    "time" : {
+      "start" : 1518017985036,
+      "stop" : 1518017985036,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "info[Verify user delete by id: 2]",
+    "title" : "Info [Verify user delete by id: 2]",
+    "time" : {
+      "start" : 1518017985037,
+      "stop" : 1518017985037,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "info[Test: class org.testng.internal.TestResult verifyUserDeleteById PASSED]",
+    "title" : "Info [Test: class org.testng.internal.TestResult verifyUserDeleteById PASSED]",
+    "time" : {
+      "start" : 1518017985408,
+      "stop" : 1518017985408,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "Surefire suite : Surefire test"
+  }, {
+    "name" : "thread",
+    "value" : "11616@EPUALVIW0287.main(1)"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  }, {
+    "name" : "host",
+    "value" : "EPUALVIW0287"
+  }, {
+    "name" : "framework",
+    "value" : "TestNG"
+  }, {
+    "name" : "suite-title",
+    "value" : "Surefire suite : Surefire test"
+  } ],
+  "parameters" : [ ]
+}

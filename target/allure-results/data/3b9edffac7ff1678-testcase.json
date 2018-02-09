@@ -1,0 +1,92 @@
+{
+  "uid" : "3b9edffac7ff1678",
+  "name" : "verifyResourceDataById",
+  "title" : "Verify resource data by id",
+  "time" : {
+    "start" : 1518017982193,
+    "stop" : 1518017983433,
+    "duration" : 1240
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 3
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "9efbf35b335c2754",
+    "name" : "Surefire suite : Surefire test",
+    "title" : "Surefire suite : Surefire test"
+  },
+  "steps" : [ {
+    "name" : "info[Test: class org.testng.internal.TestResult verifyResourceDataById is started]",
+    "title" : "Info [Test: class org.testng.internal.TestResult verifyResourceDataById is started]",
+    "time" : {
+      "start" : 1518017982190,
+      "stop" : 1518017982191,
+      "duration" : 1
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "info[Verify resource with id: 3 has name - true red, year - 2002 and color - #BF1932]",
+    "title" : "Info [Verify resource with id: 3 has name - true red, year - 2002 and color - #BF1932]",
+    "time" : {
+      "start" : 1518017982193,
+      "stop" : 1518017982193,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "info[Test: class org.testng.internal.TestResult verifyResourceDataById PASSED]",
+    "title" : "Info [Test: class org.testng.internal.TestResult verifyResourceDataById PASSED]",
+    "time" : {
+      "start" : 1518017983433,
+      "stop" : 1518017983433,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "Surefire suite : Surefire test"
+  }, {
+    "name" : "thread",
+    "value" : "11616@EPUALVIW0287.main(1)"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  }, {
+    "name" : "host",
+    "value" : "EPUALVIW0287"
+  }, {
+    "name" : "framework",
+    "value" : "TestNG"
+  }, {
+    "name" : "suite-title",
+    "value" : "Surefire suite : Surefire test"
+  } ],
+  "parameters" : [ ]
+}

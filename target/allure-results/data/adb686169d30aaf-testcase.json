@@ -1,0 +1,92 @@
+{
+  "uid" : "adb686169d30aaf",
+  "name" : "verifyUsersAmountOnPage",
+  "title" : "Verify users amount on page",
+  "time" : {
+    "start" : 1518017986975,
+    "stop" : 1518017987615,
+    "duration" : 640
+  },
+  "summary" : {
+    "attachments" : 0,
+    "steps" : 3
+  },
+  "failure" : null,
+  "description" : null,
+  "severity" : "NORMAL",
+  "status" : "PASSED",
+  "suite" : {
+    "uid" : "9efbf35b335c2754",
+    "name" : "Surefire suite : Surefire test",
+    "title" : "Surefire suite : Surefire test"
+  },
+  "steps" : [ {
+    "name" : "info[Test: class org.testng.internal.TestResult verifyUsersAmountOnPage is started]",
+    "title" : "Info [Test: class org.testng.internal.TestResult verifyUsersAmountOnPage is started]",
+    "time" : {
+      "start" : 1518017986974,
+      "stop" : 1518017986974,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "info[Verify: on page в„–: 1 are 3 users]",
+    "title" : "Info [Verify: on page в„–: 1 are 3 users]",
+    "time" : {
+      "start" : 1518017986975,
+      "stop" : 1518017986975,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  }, {
+    "name" : "info[Test: class org.testng.internal.TestResult verifyUsersAmountOnPage PASSED]",
+    "title" : "Info [Test: class org.testng.internal.TestResult verifyUsersAmountOnPage PASSED]",
+    "time" : {
+      "start" : 1518017987615,
+      "stop" : 1518017987615,
+      "duration" : 0
+    },
+    "summary" : {
+      "attachments" : 0,
+      "steps" : 0
+    },
+    "status" : "PASSED",
+    "attachments" : [ ],
+    "steps" : [ ]
+  } ],
+  "attachments" : [ ],
+  "issues" : [ ],
+  "testIds" : [ ],
+  "labels" : [ {
+    "name" : "suite-name",
+    "value" : "Surefire suite : Surefire test"
+  }, {
+    "name" : "thread",
+    "value" : "11616@EPUALVIW0287.main(1)"
+  }, {
+    "name" : "language",
+    "value" : "JAVA"
+  }, {
+    "name" : "host",
+    "value" : "EPUALVIW0287"
+  }, {
+    "name" : "framework",
+    "value" : "TestNG"
+  }, {
+    "name" : "suite-title",
+    "value" : "Surefire suite : Surefire test"
+  } ],
+  "parameters" : [ ]
+}

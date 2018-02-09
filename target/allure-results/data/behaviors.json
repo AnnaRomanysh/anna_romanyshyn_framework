@@ -1,0 +1,169 @@
+{
+  "features" : [ {
+    "title" : "Without feature",
+    "statistic" : {
+      "total" : 13,
+      "passed" : 10,
+      "pending" : 0,
+      "canceled" : 2,
+      "failed" : 0,
+      "broken" : 1
+    },
+    "stories" : [ {
+      "uid" : "2b1ee0a6aa0157d8",
+      "title" : "Without story",
+      "statistic" : {
+        "total" : 13,
+        "passed" : 10,
+        "pending" : 0,
+        "canceled" : 2,
+        "failed" : 0,
+        "broken" : 1
+      },
+      "testCases" : [ {
+        "uid" : "6dd2dcd0196d62a5",
+        "name" : "getUserDataByPageTest",
+        "title" : "Get user data by page test",
+        "time" : {
+          "start" : 1518017973826,
+          "stop" : 1518017982189,
+          "duration" : 8363
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "3b9edffac7ff1678",
+        "name" : "verifyResourceDataById",
+        "title" : "Verify resource data by id",
+        "time" : {
+          "start" : 1518017982193,
+          "stop" : 1518017983433,
+          "duration" : 1240
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "afdf2b603995f01a",
+        "name" : "verifyUnsuccessfulLogin",
+        "title" : "Verify unsuccessful login",
+        "time" : {
+          "start" : 1518017983435,
+          "stop" : 1518017984045,
+          "duration" : 610
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "43c7af9305249c4",
+        "name" : "verifyUserAbsenceById",
+        "title" : "Verify user absence by id",
+        "time" : {
+          "start" : 1518017984047,
+          "stop" : 1518017984579,
+          "duration" : 532
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "7b0c17dcaa10e93c",
+        "name" : "verifyUserCreation",
+        "title" : "Verify user creation",
+        "time" : {
+          "start" : 1518017984582,
+          "stop" : 1518017985035,
+          "duration" : 453
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "a050be657aa3b246",
+        "name" : "verifyUserDeleteById",
+        "title" : "Verify user delete by id",
+        "time" : {
+          "start" : 1518017985037,
+          "stop" : 1518017985408,
+          "duration" : 371
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "68a1e8732ec18b4e",
+        "name" : "verifyUserNamesById",
+        "title" : "Verify user names by id",
+        "time" : {
+          "start" : 1518017985411,
+          "stop" : 1518017985843,
+          "duration" : 432
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "68773e981312a80c",
+        "name" : "verifyUserPresenceById",
+        "title" : "Verify user presence by id",
+        "time" : {
+          "start" : 1518017985845,
+          "stop" : 1518017986380,
+          "duration" : 535
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "9a4ef82b692d3249",
+        "name" : "verifyUserUpdate",
+        "title" : "Verify user update",
+        "time" : {
+          "start" : 1518017986381,
+          "stop" : 1518017986973,
+          "duration" : 592
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "adb686169d30aaf",
+        "name" : "verifyUsersAmountOnPage",
+        "title" : "Verify users amount on page",
+        "time" : {
+          "start" : 1518017986975,
+          "stop" : 1518017987615,
+          "duration" : 640
+        },
+        "severity" : "NORMAL",
+        "status" : "PASSED"
+      }, {
+        "uid" : "69c97165f3c2e925",
+        "name" : "afterMethod",
+        "title" : "After method",
+        "time" : {
+          "start" : 1518017987619,
+          "stop" : 1518017987622,
+          "duration" : 3
+        },
+        "severity" : "NORMAL",
+        "status" : "BROKEN"
+      }, {
+        "uid" : "c34ad2df0e54494b",
+        "name" : "beforeMethod",
+        "title" : "Before method",
+        "time" : {
+          "start" : 1518017987634,
+          "stop" : 1518017987635,
+          "duration" : 1
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      }, {
+        "uid" : "50aaf795b6585fbf",
+        "name" : "test",
+        "title" : "Test",
+        "time" : {
+          "start" : 1518017987638,
+          "stop" : 1518017987638,
+          "duration" : 0
+        },
+        "severity" : "NORMAL",
+        "status" : "CANCELED"
+      } ]
+    } ]
+  } ]
+}

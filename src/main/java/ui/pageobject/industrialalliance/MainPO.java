@@ -1,66 +1,49 @@
 package ui.pageobject.industrialalliance;
 
-import org.openqa.selenium.Keys;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import ui.driver.Driver;
 import ui.pageobject.BasePO;
+
 
 public class MainPO extends BasePO {
 
-    @FindBy(xpath = "//*[contains(@class, 'dropdown Pret')]")
-    private WebElement loans;
+    @FindBy(xpath = "//*[@id='iconHomeNav']")
+    private WebElement homeIcon;
 
-    @FindBy(xpath = "//*[contains(@class, 'dropdown Pret')]//*[@data-utag-name='mortgage_loan']")
-    private WebElement mortgage;
+    @FindBy(xpath = "//*[@id='topLangMenuItem']")
+    private WebElement languageItem;
 
-    @FindBy(xpath = "//*[contains(@class, 'section-entete')]//..//*[@data-utag-name='calculate_your_payments']")
-    private WebElement calculatePaymentButton;
+    @FindBy(xpath = "//*[contains(@class,'dropdown connexion')]")
+    private WebElement connecDropdown;
 
-    @FindBy(xpath = "//input[@id='par_valeur']")
-    private WebElement   purchasePriceRadioValue;
+    @FindBy(xpath = "//*[@data-utag-name='individuals']")
+    private WebElement individualsTab;
 
-    @FindBy(xpath = "//input[@id='par_pret']")
-    private WebElement   mortgageAmountRadioValue;
+    @FindBy(xpath = "//*[@data-utag-name='companies_and_groups']")
+    private WebElement companiesAndGroupsTab;
 
-    @FindBy(xpath = "//input[@id='PrixPropriete']")
-    private WebElement   mortgageAmountInput;
-
-    @FindBy(xpath = "//input[@id='MiseDeFond']")
-    private WebElement   downPaymentInput;
+    @FindBy(xpath = "//*[@data-utag-name='advisors_and_brokers']")
+    private WebElement advisorsAndBrokersTab;
 
 
-    public MainPO clickLoans (){
-        loans.click();
+
+    public MainPO clickHomeIcon(){
+        homeIcon.click();
         return this;
     }
-    public MainPO clickMortgage (){
-        mortgage.click();
+    public MainPO clickLanguageIcon(){
+        languageItem.click();
         return this;
     }
-    public MainPO clickCalculatePayment(){
-        calculatePaymentButton.click();
+    public MainPO clickConnecDropdown(){
+        connecDropdown.click();
         return this;
     }
-    public MainPO clickPurchasePriceRadioValue(){
-        purchasePriceRadioValue.click();
-        return this;
-    }
-    public MainPO clickMortgageAmountRadioValue(){
-        mortgageAmountRadioValue.click();
-        return this;
-    }
-
-    public MainPO typeIntoMortgageAmountInput(String mortgageAmount){
-        mortgageAmountInput.clear();
-        mortgageAmountInput.sendKeys(mortgageAmount);
-        mortgageAmountInput.sendKeys(Keys.ENTER);
-        return this;
-    }
-    public MainPO typeIntoDownPaymentInput(String downPayment){
-        downPaymentInput.clear();
-        downPaymentInput.sendKeys(downPayment);
-        downPaymentInput.sendKeys(Keys.ENTER);
-        return this;
+    public IndividualsTabPO openIndividualsTab(){
+        individualsTab.click();
+        return new IndividualsTabPO();
     }
 
 

@@ -9,6 +9,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.opera.OperaDriver;
 import parsers.PropertiesReader;
 
@@ -20,6 +21,7 @@ public class Driver {
     private static String browserName;
     private static PropertiesReader propertiesReader;
     private static String propertiesPath = "src//main//resources//driver.properties";
+
 
     private static String setBrowsername() {
         propertiesReader = new PropertiesReader(propertiesPath);
@@ -65,48 +67,51 @@ public class Driver {
 
     }
 
-    public void maximize() {
+    public static void maximize() {
         driver.manage().window().maximize();
 
     }
 
-    public WebElement findElement(By by) {
+    public static WebElement findElement(By by) {
         return driver.findElement(by);
 
     }
 
-    public List<WebElement> findElements(By by) {
+    public static List<WebElement> findElements(By by) {
         return driver.findElements(by);
 
     }
 
-    public String getCurrentUrl() {
+    public static String getCurrentUrl() {
         return driver.getCurrentUrl();
 
     }
 
-    public void close() {
+    public static void close() {
         driver.close();
 
     }
 
-    public String getTitle() {
+    public static String getTitle() {
         return driver.getTitle();
 
     }
 
-    public Options manage() {
+    public static Options manage() {
         return driver.manage();
 
     }
 
-    public Navigation navigate() {
+    public static Navigation navigate() {
         return driver.navigate();
 
     }
 
-    public TargetLocator switchTo() {
+    public static TargetLocator switchTo() {
         return driver.switchTo();
 
+    }
+    public static Actions actions (){
+        return new Actions(driver);
     }
 }

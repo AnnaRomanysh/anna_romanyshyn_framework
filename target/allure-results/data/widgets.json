@@ -1,0 +1,59 @@
+{
+  "hash" : "e7105c43ada45c9f6e0006854ef1a1d95249231d",
+  "plugins" : {
+    "total" : {
+      "statistic" : {
+        "total" : 13,
+        "passed" : 10,
+        "pending" : 0,
+        "canceled" : 2,
+        "failed" : 0,
+        "broken" : 1
+      },
+      "time" : {
+        "start" : 1518017973826,
+        "stop" : 1518017987638,
+        "duration" : 13812
+      }
+    },
+    "defects" : {
+      "totalCount" : 1,
+      "items" : [ {
+        "count" : 1,
+        "uid" : "ea629aff234551f3",
+        "message" : "NullPointerException: null",
+        "status" : "BROKEN"
+      } ]
+    },
+    "xunit" : {
+      "totalCount" : 1,
+      "items" : [ {
+        "uid" : "9efbf35b335c2754",
+        "title" : "Surefire suite : Surefire test",
+        "statistic" : {
+          "total" : 13,
+          "passed" : 10,
+          "pending" : 0,
+          "canceled" : 2,
+          "failed" : 0,
+          "broken" : 1
+        }
+      } ]
+    },
+    "behaviors" : {
+      "totalCount" : 1,
+      "items" : [ {
+        "title" : "Without feature",
+        "statistic" : {
+          "total" : 13,
+          "passed" : 10,
+          "pending" : 0,
+          "canceled" : 2,
+          "failed" : 0,
+          "broken" : 1
+        }
+      } ]
+    },
+    "environment" : [ ]
+  }
+}

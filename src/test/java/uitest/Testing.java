@@ -1,6 +1,7 @@
 package uitest;
 
 import apitest.BaseTest;
+import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 import ui.driver.Driver;
 import ui.pageobject.industrialalliance.MainPO;
@@ -21,12 +22,26 @@ public class Testing extends BaseTest {
         dr.get("https://ia.ca/individuals");
 
         MainPO main = new MainPO();
-        main.clickLoans()
+        main.openIndividualsTab()
+                .clickLoans()
                 .clickMortgage()
                 .clickCalculatePayment()
-                .typeIntoMortgageAmountInput("10000000");
+                .clickPurchasePriceRadioValue()
+                .clearMortAmountAndPurchePriceInput()
+                .typeIntoMortAmountAndPurchePriceInput("100000")
+                .typeIntoMortAmountAndPurchePriceInput(Keys.ENTER);
 
-        main.typeIntoDownPaymentInput("5000");
+
+//        main.clickLoans()
+//                .clickMortgage()
+//                .clickCalculatePayment()
+//                .selectAmortizationByVisibleText("15 years")
+//                .selectPaymentFrequencyByVisibleText("Biweekly +")
+//                .typeIntoInterestRateInput("5")
+//                .moveMortAmountAndPurcePriceSliderToDefaultValue()
+//                .getMortAmountAndPurchePriceValue();
+
+//
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
