@@ -6,7 +6,8 @@ import ru.yandex.qatools.allure.annotations.Step;
 public class TestLogger {
 
   private static TestLogger testLogger;
-     private Logger logger;
+     private static Logger logger;
+
 
     private TestLogger(String testName, String className,  String packageName) {
 
@@ -46,15 +47,15 @@ public class TestLogger {
     }
 
    @Step
-    public void info(Object message) {
+    public static void info(Object message) {
         logger.info(message);
     }
 
-    public void debug(Object message) {
+    public static void debug(Object message) {
         logger.debug(message);
     }
 
-    public void error(String message) {
+    public static void error(String message) {
         logger.error(message);
     }
 

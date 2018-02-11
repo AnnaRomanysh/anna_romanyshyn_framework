@@ -1,7 +1,0 @@
--------------------------------------------------------------------------------
-Test set: TestSuite
--------------------------------------------------------------------------------
-Tests run: 14, Failures: 1, Errors: 0, Skipped: 3, Time elapsed: 15.372 s <<< FAILURE! - in TestSuite
-afterMethod(apitest.ReqResTest)  Time elapsed: 0.658 s  <<< FAILURE!
-java.lang.NullPointerException
-

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1518379219907" stop="1518379262693" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : anna_romanyshyn_framework</name>
+    <title>Default Suite : anna_romanyshyn_framework</title>
+    <test-cases>
+        <test-case start="1518379220271" stop="1518379261135" status="passed">
+            <name>test</name>
+            <steps>
+                <step start="1518379220218" stop="1518379220228" status="passed">
+                    <name>info[Test: class org.testng.internal.TestResult test is started]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1518379237110" stop="1518379237110" status="passed">
+                    <name>info[Open Individuals Tab]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1518379245962" stop="1518379245963" status="passed">
+                    <name>info[Open Loans Menu]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1518379246170" stop="1518379246170" status="passed">
+                    <name>info[Go to Mortgages]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1518379251840" stop="1518379251840" status="passed">
+                    <name>info[Go to Calculate Payment page]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1518379257119" stop="1518379257119" status="passed">
+                    <name>info[Choose 'Purchase price' radio value ]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1518379257239" stop="1518379257239" status="passed">
+                    <name>info[Clear Mortrage amount/purchace price input]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1518379257339" stop="1518379257340" status="passed">
+                    <name>info[Type: [Ljava.lang.CharSequence;@1e4b9592 into Mortrage amount/purchace price input]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1518379257483" stop="1518379257483" status="passed">
+                    <name>info[Type: [Ljava.lang.CharSequence;@65fe1f47 into Mortrage amount/purchace price input]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1518379257614" stop="1518379257614" status="passed">
+                    <name>info[Type: [Ljava.lang.CharSequence;@4afdb05einto down payment input]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1518379257755" stop="1518379257763" status="passed">
+                    <name>info[Type: [Ljava.lang.CharSequence;@2165d4abinto down payment input]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1518379257889" stop="1518379257889" status="passed">
+                    <name>info[Click on Calculate button]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1518379261127" stop="1518379261127" status="passed">
+                    <name>info[Test: class org.testng.internal.TestResult test PASSED]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-7D24G14"/>
+                <label name="thread" value="15076@DESKTOP-7D24G14.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>
