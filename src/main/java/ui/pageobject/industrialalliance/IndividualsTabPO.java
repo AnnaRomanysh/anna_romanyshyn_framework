@@ -3,7 +3,7 @@ package ui.pageobject.industrialalliance;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class IndividualsTabPO extends MainPO {
+public class IndividualsTabPO extends ReqResBasePO {
 
     @FindBy(xpath = "//*[@data-utag-name='insurance']")
     private WebElement insurance;
@@ -14,9 +14,10 @@ public class IndividualsTabPO extends MainPO {
     @FindBy(xpath = "//*[contains(@class, 'dropdown Pret')]")
     private WebElement loans;
 
-    public LoansPO clickLoans() {
+    public LoansMenuPO clickLoans() {
+        info("Open Loans Menu");
         loans.click();
-        return new LoansPO();
+        return new LoansMenuPO();
     }
 
 }

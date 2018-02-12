@@ -4,7 +4,8 @@ import apitest.BaseTest;
 import org.openqa.selenium.Keys;
 import org.testng.annotations.Test;
 import ui.driver.Driver;
-import ui.pageobject.industrialalliance.MainPO;
+
+import ui.pageobject.industrialalliance.ReqResBasePO;
 
 
 public class Testing extends BaseTest {
@@ -21,15 +22,18 @@ public class Testing extends BaseTest {
 //    dr.maximize();
         dr.get("https://ia.ca/individuals");
 
-        MainPO main = new MainPO();
+        ReqResBasePO main = new ReqResBasePO();
         main.openIndividualsTab()
                 .clickLoans()
-                .clickMortgage()
+                .clickMortgagesLoan()
                 .clickCalculatePayment()
                 .clickPurchasePriceRadioValue()
-                .clearMortAmountAndPurchePriceInput()
-                .typeIntoMortAmountAndPurchePriceInput("100000")
-                .typeIntoMortAmountAndPurchePriceInput(Keys.ENTER);
+                .clearMortAmountORpurchePriceInput()
+                .typeIntoMortAmountORpurchePriceInput("1293073")
+                .typeIntoDownPaymentInput("50")
+                .clickCalculateButton()
+                .getDownPaymenError();
+
 
 
 //        main.clickLoans()
@@ -42,11 +46,7 @@ public class Testing extends BaseTest {
 //                .getMortAmountAndPurchePriceValue();
 
 //
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+
 
     }
 
