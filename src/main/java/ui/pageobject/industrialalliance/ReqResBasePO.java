@@ -2,28 +2,29 @@ package ui.pageobject.industrialalliance;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import ui.element.Element;
 import ui.pageobject.BasePO;
 
 
 public class ReqResBasePO extends BasePO {
 
     @FindBy(xpath = "//*[@id='iconHomeNav']")
-    private WebElement homeIcon;
+    private Element homeIcon;
 
     @FindBy(xpath = "//*[@id='topLangMenuItem']")
-    private WebElement languageItem;
+    private Element languageItem;
 
     @FindBy(xpath = "//*[contains(@class,'dropdown connexion')]")
-    private WebElement connecDropdown;
+    private Element connecDropdown;
 
     @FindBy(xpath = "//*[@data-utag-name='individuals']")
-    private WebElement individualsTab;
+    private Element individualsTab;
 
     @FindBy(xpath = "//*[@data-utag-name='companies_and_groups']")
-    private WebElement companiesAndGroupsTab;
+    private Element companiesAndGroupsTab;
 
     @FindBy(xpath = "//*[@data-utag-name='advisors_and_brokers']")
-    private WebElement advisorsAndBrokersTab;
+    private Element advisorsAndBrokersTab;
 
 
 

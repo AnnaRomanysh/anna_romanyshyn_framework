@@ -32,7 +32,7 @@ public class Testing extends BaseTest {
                 .typeIntoMortAmountORpurchePriceInput("1293073")
                 .typeIntoDownPaymentInput("50")
                 .clickCalculateButton()
-                .getDownPaymenError();
+                .typeIntoInterestRateInput("6");
 
 
 

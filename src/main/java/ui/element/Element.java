@@ -1,97 +1,95 @@
 package ui.element;
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.internal.Coordinates;
+import org.openqa.selenium.interactions.internal.Locatable;
 
 import java.util.List;
 
-public class Element implements WebElement {
-    protected WebElement webElement;
+public class Element implements IElement {
+    private final WebElement element;
 
-    public Element(WebElement webElement) {
-        this.webElement = webElement;
+    public Element(final WebElement element) {
+        this.element = element;
     }
-    @Override
+
+    public WebElement getElement() {
+        return element;
+    }
+
     public void click() {
-        webElement.click();
+        element.click();
     }
 
-    @Override
     public void submit() {
-        webElement.submit();
+        element.submit();
     }
 
-    @Override
     public void sendKeys(CharSequence... keysToSend) {
-        webElement.sendKeys(keysToSend);
+        element.sendKeys(keysToSend);
     }
 
-    @Override
     public void clear() {
-
+        element.clear();
     }
 
-    @Override
     public String getTagName() {
-        return null;
+        return element.getTagName();
     }
 
-    @Override
     public String getAttribute(String name) {
-        return null;
+        return element.getAttribute(name);
     }
 
-    @Override
     public boolean isSelected() {
-        return false;
+        return element.isSelected();
     }
 
-    @Override
     public boolean isEnabled() {
-        return false;
+        return element.isEnabled();
     }
 
-    @Override
     public String getText() {
-        return null;
+        return element.getText();
     }
 
-    @Override
     public List<WebElement> findElements(By by) {
-        return null;
+        return element.findElements(by);
     }
 
-    @Override
     public WebElement findElement(By by) {
-        return null;
+        return element.findElement(by);
     }
 
-    @Override
     public boolean isDisplayed() {
-        return false;
+        return element.isDisplayed();
     }
 
-    @Override
     public Point getLocation() {
-        return null;
+        return element.getLocation();
     }
 
-    @Override
     public Dimension getSize() {
-        return null;
+        return element.getSize();
     }
 
-    @Override
     public Rectangle getRect() {
-        return null;
+        return element.getRect();
     }
 
-    @Override
     public String getCssValue(String propertyName) {
-        return null;
+        return element.getCssValue(propertyName);
     }
 
-    @Override
     public <X> X getScreenshotAs(OutputType<X> target) throws WebDriverException {
-        return null;
+        return element.getScreenshotAs(target);
+    }
+
+    public Coordinates getCoordinates() {
+        return ((Locatable) getElement()).getCoordinates();
+    }
+
+    public WebElement getWrappedElement() {
+        return getElement();
     }
 }

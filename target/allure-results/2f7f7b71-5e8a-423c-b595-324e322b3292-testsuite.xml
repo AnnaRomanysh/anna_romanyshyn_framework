@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1518470547999" stop="1518470617696" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Default Suite : anna_romanyshyn_framework</name>
+    <title>Default Suite : anna_romanyshyn_framework</title>
+    <test-cases>
+        <test-case start="1518470548362" stop="1518470616267" status="passed">
+            <name>test</name>
+            <steps>
+                <step start="1518470548301" stop="1518470548313" status="passed">
+                    <name>info[Test: class org.testng.internal.TestResult test is started]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1518470585720" stop="1518470585720" status="passed">
+                    <name>info[Open Individuals Tab]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1518470590788" stop="1518470590788" status="passed">
+                    <name>info[Open Loans Menu]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1518470591060" stop="1518470591060" status="passed">
+                    <name>info[Go to Mortgages]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1518470608868" stop="1518470608868" status="passed">
+                    <name>info[Go to Calculate Payment page]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1518470615114" stop="1518470615114" status="passed">
+                    <name>info[Choose 'Purchase price' radio value ]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1518470615304" stop="1518470615304" status="passed">
+                    <name>info[Clear Mortrage amount/purchace price input]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1518470615457" stop="1518470615457" status="passed">
+                    <name>info[Type: 1293073 into Mortrage amount/purchace price input]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1518470615631" stop="1518470615631" status="passed">
+                    <name>info[Type: 50 into down payment input]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1518470615791" stop="1518470615792" status="passed">
+                    <name>info[Click on Calculate button]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1518470616056" stop="1518470616056" status="passed">
+                    <name>info[Type 6 % into interest rate input]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1518470616257" stop="1518470616257" status="passed">
+                    <name>info[Test: class org.testng.internal.TestResult test PASSED]</name>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="host" value="DESKTOP-7D24G14"/>
+                <label name="thread" value="21352@DESKTOP-7D24G14.main(1)"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="framework" value="TestNG"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

@@ -1,0 +1,13 @@
+[INFO ] 23:23:49 test: Test: class org.testng.internal.TestResult test is started
+[INFO ] 23:25:14 test: Open Individuals Tab
+[INFO ] 23:25:18 test: Open Loans Menu
+[INFO ] 23:25:19 test: Go to Mortgages
+[INFO ] 23:25:41 test: Go to Calculate Payment page
+[INFO ] 23:25:47 test: Choose 'Purchase price' radio value 
+[INFO ] 23:25:47 test: Clear Mortrage amount/purchace price input
+[INFO ] 23:25:47 test: Type: 1293073 into Mortrage amount/purchace price input
+[INFO ] 23:25:47 test: Type: 50 into down payment input
+[INFO ] 23:25:48 test: Click on Calculate button
+[INFO ] 23:25:48 test: Type 6 % into interest rate input
+[INFO ] 23:25:48 test: Test: class org.testng.internal.TestResult test PASSED
+[ERROR] 23:25:49 test: Test: class org.testng.TestRunner anna_romanyshyn_frameworkis finished
