@@ -1,14 +1,21 @@
 package ui.element;
+
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.internal.Coordinates;
 import org.openqa.selenium.interactions.internal.Locatable;
+import utils.TestLogger;
 
 import java.util.List;
 
-public  class Element implements IElement {
+public class Element implements IElement {
+
+    protected void error(String message) {
+        TestLogger.error(message);
+    }
+
     protected final WebElement element;
 
-    public Element( WebElement element) {
+    public Element(WebElement element) {
         this.element = element;
     }
 

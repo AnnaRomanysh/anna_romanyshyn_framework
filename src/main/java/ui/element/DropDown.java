@@ -7,9 +7,11 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.List;
 
 public class DropDown extends Element {
+
     public DropDown(WebElement webElement) {
         super(webElement);
     }
+
 
     private String dropDownValue = "./..//li[normalize-space()='%s']";
 
@@ -49,7 +51,8 @@ public class DropDown extends Element {
     }
 
     public boolean isMultiple() {
-        return new Select(getElement()).isMultiple();
+            return new Select(getElement()).isMultiple();
+
     }
 
     public void deselectAll() {
