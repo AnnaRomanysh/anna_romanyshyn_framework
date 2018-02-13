@@ -4,54 +4,56 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import ui.driver.Driver;
+import ui.element.Element;
+import ui.element.Input;
 
 public class CalculatePaymentsPO extends ReqResBasePO {
 
     @FindBy(xpath = "//input[@id='par_valeur']")
-    private WebElement purchasePriceRadioValue;
+    private Element purchasePriceRadioValue;
 
     @FindBy(xpath = "//input[@id='par_pret']")
-    private WebElement mortgageAmountRadioValue;
+    private Element mortgageAmountRadioValue;
 
     @FindBy(xpath = "//input[@id='PrixPropriete']")
-    private WebElement mortAmountAndPurchePriceInput;
+    private Element mortAmountAndPurchePriceInput;
 
     @FindBy(xpath = "//input[@id='MiseDeFond']")
-    private WebElement downPaymentInput;
+    private Element downPaymentInput;
 
     @FindBy(xpath = "//*[@name='PrixPropriete']//../..//*[contains(@class,'min-slider-handle')]")
-    private WebElement mortAmountAndPurchPriceSlider;
+    private Element mortAmountAndPurchPriceSlider;
 
     @FindBy(xpath = "//*[@name='MiseDeFond']//../..//*[contains(@class,'min-slider-handle')]")
-    private WebElement downPaymenSlider;
+    private Element downPaymenSlider;
 
     @FindBy(xpath = "//*[@id='sliderPrixPropriete']")
-    private WebElement mortAmountAndPurchPriceInnerInput;
+    private Element mortAmountAndPurchPriceInnerInput;
 
     @FindBy(xpath = "//*[@id='sliderMiseDeFond']")
-    private WebElement downPaymenInnerInput;
+    private Element downPaymenInnerInput;
 
     @FindBy(xpath = "//*[@id='MiseDeFond_error']")
-    private WebElement downPaymenError;
+    private Element downPaymenError;
 
     @FindBy(xpath = "//*[contains(@for, 'Amortissement')]//..//*[@class='selectric']")
-    private WebElement amortizationDropdown;
+    private Element amortizationDropdown;
 
     @FindBy(xpath = "//*[@id='sliderMiseDeFond']")
-    private WebElement sliderMiseDeFond;
+    private Element sliderMiseDeFond;
 
     @FindBy(xpath = "//*[contains(@for, 'FrequenceVersement')]//following-sibling::*//*[@class='selectric']")
-    private WebElement paymentFrequencyDropdown;
+    private Element paymentFrequencyDropdown;
 
     @FindBy(xpath = "//*[@id='TauxInteret']")
-    private WebElement interestRateInput;
+    private Input interestRateInput;
 
     @FindBy(xpath = " //*[@id='btn_calculer']")
-    private WebElement calculateButton;
+    private Element calculateButton;
 
 
     @FindBy(xpath = "//*[@id='paiement-resultats']")
-    private WebElement paymentResult;
+    private Element paymentResult;
 
 
     private String dropDownValue = "./..//li[normalize-space()='%s']";
