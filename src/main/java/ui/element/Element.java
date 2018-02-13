@@ -1,15 +1,14 @@
 package ui.element;
-
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.internal.Coordinates;
 import org.openqa.selenium.interactions.internal.Locatable;
 
 import java.util.List;
 
-public class Element implements IElement {
-    private final WebElement element;
+public  class Element implements IElement {
+    protected final WebElement element;
 
-    public Element(final WebElement element) {
+    public Element( WebElement element) {
         this.element = element;
     }
 

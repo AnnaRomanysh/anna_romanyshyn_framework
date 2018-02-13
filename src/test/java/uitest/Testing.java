@@ -13,14 +13,7 @@ public class Testing extends BaseTest {
     @Test
     public void test() {
 
-
-//    System.setProperty("webdriver.chrome.driver", "src/main/resources/drivers/chromedriver.exe");
-//    WebDriver driver = new ChromeDriver();
-        Driver dr = new Driver();
-        dr.getDriver();
-
-//    dr.maximize();
-        dr.get("https://ia.ca/individuals");
+        Driver.getDriver().get("https://ia.ca/individuals");
 
         ReqResBasePO main = new ReqResBasePO();
         main.openIndividualsTab()
@@ -32,20 +25,13 @@ public class Testing extends BaseTest {
                 .typeIntoMortAmountORpurchePriceInput("1293073")
                 .typeIntoDownPaymentInput("50")
                 .clickCalculateButton()
-                .typeIntoInterestRateInput("6");
-
-
-
-//        main.clickLoans()
-//                .clickMortgage()
-//                .clickCalculatePayment()
-//                .selectAmortizationByVisibleText("15 years")
-//                .selectPaymentFrequencyByVisibleText("Biweekly +")
-//                .typeIntoInterestRateInput("5")
-//                .moveMortAmountAndPurcePriceSliderToDefaultValue()
-//                .getMortAmountAndPurchePriceValue();
-
-//
+                .typeIntoInterestRateInput("6")
+        .selectAmortizationByVisibleText("15 years");
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
 
     }

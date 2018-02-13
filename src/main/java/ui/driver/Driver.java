@@ -1,11 +1,8 @@
 package ui.driver;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.*;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebDriver.Navigation;
-import org.openqa.selenium.WebDriver.Options;
-import org.openqa.selenium.WebDriver.TargetLocator;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.WebDriver.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
@@ -61,9 +58,8 @@ public class Driver {
 
     }
 
-    public Driver get(String url) {
+    public static void get(String url) {
         driver.get(url);
-        return this;
 
     }
 
@@ -111,7 +107,8 @@ public class Driver {
         return driver.switchTo();
 
     }
-    public static Actions actions (){
+
+    public static Actions actions() {
         return new Actions(driver);
     }
 }

@@ -1,7 +1,6 @@
 package ui.pageobject.industrialalliance;
-
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import ui.element.Button;
 import ui.element.Element;
 import ui.pageobject.BasePO;
 
@@ -9,46 +8,46 @@ import ui.pageobject.BasePO;
 public class ReqResBasePO extends BasePO {
 
     @FindBy(xpath = "//*[@id='iconHomeNav']")
-    private Element homeIcon;
+    private Button homeIcon;
 
     @FindBy(xpath = "//*[@id='topLangMenuItem']")
-    private Element languageItem;
+    private Button languageItem;
 
     @FindBy(xpath = "//*[contains(@class,'dropdown connexion')]")
-    private Element connecDropdown;
+    private Element connectMenu;
 
     @FindBy(xpath = "//*[@data-utag-name='individuals']")
-    private Element individualsTab;
+    private Button individualsTab;
 
     @FindBy(xpath = "//*[@data-utag-name='companies_and_groups']")
-    private Element companiesAndGroupsTab;
+    private Button companiesAndGroupsTab;
 
     @FindBy(xpath = "//*[@data-utag-name='advisors_and_brokers']")
-    private Element advisorsAndBrokersTab;
+    private Button advisorsAndBrokersTab;
 
-
-
-    public ReqResBasePO clickHomeIcon(){
+    public ReqResBasePO clickHomeIcon() {
         info("Click on Home icon");
         homeIcon.click();
         return this;
     }
-    public ReqResBasePO clickLanguageIcon(){
+
+    public ReqResBasePO clickLanguageIcon() {
         info("Change language");
         languageItem.click();
         return this;
     }
-    public ReqResBasePO clickConnectDropdown(){
+
+    public ReqResBasePO clickConnectDropdown() {
         info("Open Connect dropdown");
-        connecDropdown.click();
+        connectMenu.click();
         return this;
     }
-    public IndividualsTabPO openIndividualsTab(){
+
+    public IndividualsTabPO openIndividualsTab() {
         info("Open Individuals Tab");
         individualsTab.click();
         return new IndividualsTabPO();
     }
-
 
 
 }

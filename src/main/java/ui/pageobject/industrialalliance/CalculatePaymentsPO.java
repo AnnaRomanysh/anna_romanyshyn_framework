@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import ui.driver.Driver;
+import ui.element.DropDown;
 import ui.element.Element;
 import ui.element.Input;
 
@@ -37,12 +38,12 @@ public class CalculatePaymentsPO extends ReqResBasePO {
     private Element downPaymenError;
 
     @FindBy(xpath = "//*[contains(@for, 'Amortissement')]//..//*[@class='selectric']")
-    private Element amortizationDropdown;
+    private DropDown amortizationDropdown;
 
     @FindBy(xpath = "//*[@id='sliderMiseDeFond']")
     private Element sliderMiseDeFond;
 
-    @FindBy(xpath = "//*[contains(@for, 'FrequenceVersement')]//following-sibling::*//*[@class='selectric']")
+    @FindBy(xpath = "//*[contains(@for, 'Amortissement')]//..//*[contains(@class,'selectric-wrapper')]")
     private Element paymentFrequencyDropdown;
 
     @FindBy(xpath = "//*[@id='TauxInteret']")
@@ -56,7 +57,7 @@ public class CalculatePaymentsPO extends ReqResBasePO {
     private Element paymentResult;
 
 
-    private String dropDownValue = "./..//li[normalize-space()='%s']";
+//    private String dropDownValue = "./..//li[normalize-space()='%s']";
 
 
     public CalculatePaymentsPO clickPurchasePriceRadioValue() {
@@ -119,15 +120,16 @@ public class CalculatePaymentsPO extends ReqResBasePO {
 
     public CalculatePaymentsPO selectAmortizationByVisibleText(String amortizationValue) {
         info("Select amortization: " + amortizationValue);
-        amortizationDropdown.click();
-        amortizationDropdown.findElement(By.xpath(dropDownValue.replace("%s", amortizationValue))).click();
+        amortizationDropdown.selectByVisibleText(amortizationValue);
+//        amortizationDropdown.click();
+//        amortizationDropdown.findElement(By.xpath(dropDownValue.replace("%s", amortizationValue))).click();
         return this;
     }
 
     public CalculatePaymentsPO selectPaymentFrequencyByVisibleText(String paymentFrequency) {
-        info("Select payment frequency: " + paymentFrequency);
-        paymentFrequencyDropdown.click();
-        paymentFrequencyDropdown.findElement(By.xpath(dropDownValue.replace("%s", paymentFrequency))).click();
+//        info("Select payment frequency: " + paymentFrequency);
+//        paymentFrequencyDropdown.click();
+//        paymentFrequencyDropdown.findElement(By.xpath(dropDownValue.replace("%s", paymentFrequency))).click();
         return this;
     }
 
@@ -209,7 +211,7 @@ public class CalculatePaymentsPO extends ReqResBasePO {
         return paymentResult;
     }
 
-    public String getDropDownValue() {
-        return dropDownValue;
-    }
+//    public String getDropDownValue() {
+//        return dropDownValue;
+//    }
 }

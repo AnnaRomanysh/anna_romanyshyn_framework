@@ -1,6 +1,4 @@
 package ui.pageobject.industrialalliance;
-
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import ui.element.Element;
 

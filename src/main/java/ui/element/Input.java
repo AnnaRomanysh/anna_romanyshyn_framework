@@ -6,10 +6,12 @@ public class Input extends Element {
     public Input(WebElement element) {
         super(element);
     }
-    public void sendKeys(CharSequence...charSequences){
+
+    public void sendKeys(CharSequence... charSequences) {
         getWrappedElement().sendKeys(charSequences);
     }
-    public void clear(){
+
+    public void clear() {
         getWrappedElement().clear();
     }
 }
