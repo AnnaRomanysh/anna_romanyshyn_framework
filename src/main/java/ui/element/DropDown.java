@@ -1,8 +1,8 @@
 package ui.element;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
+import ui.driver.Driver;
 
 import java.util.List;
 
@@ -21,7 +21,7 @@ public class DropDown extends Element {
             new Select(getElement()).selectByVisibleText(text);
         }
         else {
-            element.click();
+           Driver.executeScript("arguments[0].click();", getElement());
             element.findElement(By.xpath(dropDownValue.replace("%s", text))).click();
         }
 
@@ -44,6 +44,7 @@ public class DropDown extends Element {
             new Select(getElement()).selectByValue(value);
         }
         else{
+
             element.click();
             element.findElements(By.xpath("./..//li")).stream().filter(el->el.getAttribute(attribitename).equals(value)).findFirst().get().click();
 

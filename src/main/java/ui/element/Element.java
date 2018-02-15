@@ -7,7 +7,7 @@ import utils.TestLogger;
 
 import java.util.List;
 
-public class Element implements IElement {
+public abstract class Element implements IElement {
 
     protected void error(String message) {
         TestLogger.error(message);
@@ -24,7 +24,7 @@ public class Element implements IElement {
     }
 
     public void click() {
-        element.click();
+      element.click();
     }
 
     public void submit() {

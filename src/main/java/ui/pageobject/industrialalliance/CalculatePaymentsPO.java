@@ -1,74 +1,68 @@
 package ui.pageobject.industrialalliance;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import ui.driver.Driver;
-import ui.element.DropDown;
-import ui.element.Element;
-import ui.element.Input;
+import ui.element.*;
 
 public class CalculatePaymentsPO extends ReqResBasePO {
 
     @FindBy(xpath = "//input[@id='par_valeur']")
-    private Element purchasePriceRadioValue;
+    private Button purchasePriceRadioValue;
 
     @FindBy(xpath = "//input[@id='par_pret']")
-    private Element mortgageAmountRadioValue;
+    private Button mortgageAmountRadioValue;
 
     @FindBy(xpath = "//input[@id='PrixPropriete']")
-    private Element mortAmountAndPurchePriceInput;
+    private Input mortAmountAndPurchePriceInput;
 
     @FindBy(xpath = "//input[@id='MiseDeFond']")
-    private Element downPaymentInput;
+    private Input downPaymentInput;
 
     @FindBy(xpath = "//*[@name='PrixPropriete']//../..//*[contains(@class,'min-slider-handle')]")
-    private Element mortAmountAndPurchPriceSlider;
+    private Slider mortAmountAndPurchPriceSlider;
 
     @FindBy(xpath = "//*[@name='MiseDeFond']//../..//*[contains(@class,'min-slider-handle')]")
-    private Element downPaymenSlider;
+    private Slider downPaymenSlider;
 
     @FindBy(xpath = "//*[@id='sliderPrixPropriete']")
-    private Element mortAmountAndPurchPriceInnerInput;
+    private Input mortAmountAndPurchPriceInnerInput;
 
     @FindBy(xpath = "//*[@id='sliderMiseDeFond']")
-    private Element downPaymenInnerInput;
+    private Input downPaymenInnerInput;
 
     @FindBy(xpath = "//*[@id='MiseDeFond_error']")
-    private Element downPaymenError;
+    private TextArea downPaymenError;
 
     @FindBy(xpath = "//*[contains(@for, 'Amortissement')]//..//*[@class='selectric']")
     private DropDown amortizationDropdown;
 
     @FindBy(xpath = "//*[@id='sliderMiseDeFond']")
-    private Element sliderMiseDeFond;
+    private TextArea sliderMiseDeFond;
 
     @FindBy(xpath = "//*[contains(@for, 'Amortissement')]//..//*[contains(@class,'selectric-wrapper')]")
-    private Element paymentFrequencyDropdown;
+    private DropDown paymentFrequencyDropdown;
 
     @FindBy(xpath = "//*[@id='TauxInteret']")
     private Input interestRateInput;
 
     @FindBy(xpath = " //*[@id='btn_calculer']")
-    private Element calculateButton;
-
+    private Button calculateButton;
 
     @FindBy(xpath = "//*[@id='paiement-resultats']")
-    private Element paymentResult;
+    private TextArea paymentResult;
 
 
-//    private String dropDownValue = "./..//li[normalize-space()='%s']";
 
 
     public CalculatePaymentsPO clickPurchasePriceRadioValue() {
         info("Choose 'Purchase price' radio value ");
-        purchasePriceRadioValue.click();
+            purchasePriceRadioValue.click();
         return this;
     }
 
     public CalculatePaymentsPO clickMortgageAmountRadioValue() {
         info("Choose 'Mortgage amount' radio value ");
-        mortgageAmountRadioValue.click();
+            mortgageAmountRadioValue.click();
+
         return this;
     }
 
@@ -86,14 +80,14 @@ public class CalculatePaymentsPO extends ReqResBasePO {
 
     public CalculatePaymentsPO moveMortAmountORpurcePriceSliderToDefaultValue() {
         info("Move Mortrage amount/purchace price slider to default value");
-        Driver.actions().dragAndDropBy(mortAmountAndPurchPriceSlider, 100, 0).perform();
+        mortAmountAndPurchPriceSlider.moveByCoorginats(100, 0);
         return this;
 
     }
 
     public CalculatePaymentsPO moveDownPaymentSliderToDefaultValue() {
         info("Move Down Payment slider to default value");
-        Driver.actions().dragAndDropBy(downPaymenSlider, 100, 0).perform();
+      downPaymenSlider.moveByCoorginats(100, 0);
         return this;
 
     }
@@ -121,15 +115,12 @@ public class CalculatePaymentsPO extends ReqResBasePO {
     public CalculatePaymentsPO selectAmortizationByVisibleText(String amortizationValue) {
         info("Select amortization: " + amortizationValue);
         amortizationDropdown.selectByVisibleText(amortizationValue);
-//        amortizationDropdown.click();
-//        amortizationDropdown.findElement(By.xpath(dropDownValue.replace("%s", amortizationValue))).click();
         return this;
     }
 
     public CalculatePaymentsPO selectPaymentFrequencyByVisibleText(String paymentFrequency) {
-//        info("Select payment frequency: " + paymentFrequency);
-//        paymentFrequencyDropdown.click();
-//        paymentFrequencyDropdown.findElement(By.xpath(dropDownValue.replace("%s", paymentFrequency))).click();
+        info("Select payment frequency: " + paymentFrequency);
+        paymentFrequencyDropdown.selectByVisibleText(paymentFrequency);
         return this;
     }
 

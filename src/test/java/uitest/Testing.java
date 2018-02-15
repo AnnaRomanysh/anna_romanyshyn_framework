@@ -20,13 +20,17 @@ public class Testing extends BaseTest {
                 .clickLoans()
                 .clickMortgagesLoan()
                 .clickCalculatePayment()
+                .clickMortgageAmountRadioValue()
                 .clickPurchasePriceRadioValue()
                 .clearMortAmountORpurchePriceInput()
                 .typeIntoMortAmountORpurchePriceInput("1293073")
                 .typeIntoDownPaymentInput("50")
-                .clickCalculateButton()
+                .selectAmortizationByVisibleText("15 years")
                 .typeIntoInterestRateInput("6")
-        .selectAmortizationByVisibleText("15 years");
+                .clickCalculateButton()
+                .getDownPaymenError();
+//
+
         try {
             Thread.sleep(5000);
         } catch (InterruptedException e) {

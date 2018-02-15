@@ -1,7 +1,7 @@
 package ui.pageobject.industrialalliance;
 import org.openqa.selenium.support.FindBy;
 import ui.element.Button;
-import ui.element.Element;
+import ui.element.Checkbox;
 import ui.pageobject.BasePO;
 
 
@@ -14,7 +14,7 @@ public class ReqResBasePO extends BasePO {
     private Button languageItem;
 
     @FindBy(xpath = "//*[contains(@class,'dropdown connexion')]")
-    private Element connectMenu;
+    private Button connectMenu;
 
     @FindBy(xpath = "//*[@data-utag-name='individuals']")
     private Button individualsTab;
@@ -45,9 +45,23 @@ public class ReqResBasePO extends BasePO {
 
     public IndividualsTabPO openIndividualsTab() {
         info("Open Individuals Tab");
-        individualsTab.click();
+            individualsTab.click();
         return new IndividualsTabPO();
     }
 
 
+
+    @FindBy(xpath = "//section[@id='components-checkbox-demo-group']//input")
+    private Checkbox f;
+
+
+    public void a(String ... a){
+        f.checkByValues(a);
+    }
+    public void b(){
+        f.deselectAll();
+    }
+    public void d(){
+        f.selectAll();
+    }
 }

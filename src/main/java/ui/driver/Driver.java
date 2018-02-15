@@ -8,6 +8,8 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.opera.OperaDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import parsers.PropertiesReader;
 
 import java.util.List;
@@ -110,5 +112,14 @@ public class Driver {
 
     public static Actions actions() {
         return new Actions(driver);
+    }
+
+    public static Object executeScript(String script, Object... args) {
+        return ((JavascriptExecutor) getDriver()).executeScript(script, args);
+    }
+
+    public static void wait(int timeout, ExpectedCondition expectedCondition){
+        new WebDriverWait(getDriver(), 60).until(expectedCondition);
+
     }
 }

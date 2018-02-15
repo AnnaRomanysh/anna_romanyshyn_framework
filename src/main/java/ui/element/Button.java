@@ -1,4 +1,5 @@
 package ui.element;
+
 import org.openqa.selenium.WebElement;
 
 
@@ -7,11 +8,19 @@ public class Button extends Element {
         super(webElement);
     }
 
+
+    public boolean isEnabled() {
+        return element.isEnabled();
+    }
+
+    public boolean isSelected() {
+        return element.isSelected();
+    }
     public void click(){
-        element.click();
+        if(!getElement().isSelected()){
+            getElement().click();
+        }
     }
-    public boolean isInabled(){
-       return element.isEnabled();
-    }
+
 
 }

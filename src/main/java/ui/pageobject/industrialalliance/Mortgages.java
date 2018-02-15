@@ -1,17 +1,16 @@
 package ui.pageobject.industrialalliance;
 import org.openqa.selenium.support.FindBy;
-import ui.element.Element;
-
+import ui.element.Button;
 public class Mortgages  extends ReqResBasePO{
 
     @FindBy(xpath = "//*[contains(@class, 'section-entete')]//..//*[@data-utag-name='calculate_your_payments']")
-    private Element calculatePaymentButton;
+    private Button calculatePaymentButton;
 
     @FindBy(xpath = "//*[contains(@class, 'section-entete')]//..//*[@data-utag-name='calculate_your_capacity']")
-    private Element calculateCapacityButton;
+    private Button calculateCapacityButton;
 
     @FindBy(xpath = "//*[contains(@class, 'section-entete')]//..//*[@data-utag-name='apply_pre_approval']")
-    private Element applyPreApprovalButton;
+    private Button applyPreApprovalButton;
 
     public CalculatePaymentsPO clickCalculatePayment() {
         info("Go to Calculate Payment page");
