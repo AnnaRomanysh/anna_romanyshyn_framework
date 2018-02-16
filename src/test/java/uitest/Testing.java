@@ -1,10 +1,10 @@
 package uitest;
 
 import apitest.BaseTest;
-import org.openqa.selenium.Keys;
+import org.testng.Assert;
 import org.testng.annotations.Test;
-import ui.driver.Driver;
 
+import ui.driver.DriverManager;
 import ui.pageobject.industrialalliance.ReqResBasePO;
 
 
@@ -13,7 +13,7 @@ public class Testing extends BaseTest {
     @Test
     public void test() {
 
-        Driver.getDriver().get("https://ia.ca/individuals");
+       DriverManager.get("https://ia.ca/individuals");
 
         ReqResBasePO main = new ReqResBasePO();
         main.openIndividualsTab()
@@ -29,6 +29,7 @@ public class Testing extends BaseTest {
                 .typeIntoInterestRateInput("6")
                 .clickCalculateButton()
                 .getDownPaymenError();
+
 //
 
         try {

@@ -51,17 +51,9 @@ public class ReqResBasePO extends BasePO {
 
 
 
-    @FindBy(xpath = "//section[@id='components-checkbox-demo-group']//input")
+    @FindBy(xpath = "//*[@heading='Boolean checkboxes demo' ]")
     private Checkbox f;
 
 
-    public void a(String ... a){
-        f.checkByValues(a);
-    }
-    public void b(){
-        f.deselectAll();
-    }
-    public void d(){
-        f.selectAll();
-    }
+
 }

@@ -3,7 +3,7 @@ package apitest;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
-import ui.driver.Driver;
+import ui.driver.DriverManager;
 import utils.TestLogger;
 
 import java.lang.reflect.Method;
@@ -11,7 +11,7 @@ import java.lang.reflect.Method;
 @Listeners(utils.TestListener.class)
 public class BaseTest {
     public TestLogger log;
-    private Driver driver =  new Driver();
+
 
 
     @BeforeMethod
@@ -26,7 +26,7 @@ public class BaseTest {
 
     @AfterClass
     public void afterMethod(){
-        driver.quit();
+        DriverManager.getDriver().quit();
     }
 
 }

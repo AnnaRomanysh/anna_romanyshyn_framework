@@ -9,14 +9,14 @@ import java.util.List;
 
 public abstract class Element implements IElement {
 
-    protected void error(String message) {
-        TestLogger.error(message);
-    }
-
     protected final WebElement element;
 
     public Element(WebElement element) {
         this.element = element;
+    }
+
+    protected void error(String message) {
+        TestLogger.error(message);
     }
 
     public WebElement getElement() {
@@ -24,7 +24,7 @@ public abstract class Element implements IElement {
     }
 
     public void click() {
-      element.click();
+        element.click();
     }
 
     public void submit() {

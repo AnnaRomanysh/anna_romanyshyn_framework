@@ -1,7 +1,7 @@
 package ui.element;
 
 import org.openqa.selenium.WebElement;
-import ui.driver.Driver;
+import ui.driver.DriverManager;
 
 public class Slider extends Element {
     public Slider(WebElement webElement) {
@@ -9,12 +9,12 @@ public class Slider extends Element {
     }
 
     public void moveTo(WebElement toElement) {
-        Driver.actions().dragAndDrop(element, toElement).perform();
+        DriverManager.actions().dragAndDrop(getElement(), toElement).perform();
 
     }
 
     public void moveByCoorginats(int xOffSet, int yOffSet) {
-        Driver.actions().dragAndDropBy(element, xOffSet, yOffSet).perform();
+        DriverManager.actions().dragAndDropBy(getElement(), xOffSet, yOffSet).perform();
 
     }
 
