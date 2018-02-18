@@ -9,6 +9,7 @@ public class BasePO {
 
 
     public BasePO() {
+
         PageFactory.initElements(new FieldDecorator(Driver.getDriver()), this);
 
     }

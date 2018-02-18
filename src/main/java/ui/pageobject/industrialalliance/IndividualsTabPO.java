@@ -9,6 +9,7 @@ public class IndividualsTabPO extends ReqResBasePO {
     @FindBy(xpath = "//*[@data-utag-name='insurance']")
     private Element insurance;
 
+
     @FindBy(xpath = " //*[@data-utag-name='saving_and_retirement']")
     private Element savingAndRetirement;
 
