@@ -61,6 +61,8 @@ public class CalculatePaymentsPO extends ReqResBasePO {
 
     public CalculatePaymentsPO clickMortgageAmountRadioValue() {
         info("Choose 'Mortgage amount' radio value ");
+
+
             mortgageAmountRadioValue.click();
 
         return this;
