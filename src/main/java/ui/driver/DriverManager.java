@@ -5,8 +5,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.TestLogger;
 
 import java.util.List;
@@ -88,17 +86,9 @@ public class DriverManager {
         return new Actions(driver);
     }
 
-    public static void takeScreenShot(String filePath){
-
-    }
 
     public static Object executeScript(String script, Object... args) {
         return ((JavascriptExecutor) driver).executeScript(script, args);
-    }
-
-    public static void wait(int timeout, ExpectedCondition expectedCondition) {
-        new WebDriverWait(driver, 60).until(expectedCondition);
-
     }
 
 

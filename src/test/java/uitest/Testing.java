@@ -40,6 +40,66 @@ public class Testing extends BaseTest {
 
 
     }
+    @Test
+    public void test1() {
+
+        DriverManager.get("https://ia.ca/individuals");
+
+        ReqResBasePO main = new ReqResBasePO();
+        main.openIndividualsTab()
+                .clickLoans()
+                .clickMortgagesLoan()
+                .clickCalculatePayment()
+                .clickMortgageAmountRadioValue()
+                .clickPurchasePriceRadioValue()
+                .clearMortAmountORpurchePriceInput()
+                .typeIntoMortAmountORpurchePriceInput("1293073")
+                .typeIntoDownPaymentInput("50")
+                .selectAmortizationByVisibleText("15 years")
+                .typeIntoInterestRateInput("6")
+                .clickCalculateButton()
+                .getDownPaymenError();
+
+//
+
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+
+    }
+    @Test
+    public void test2() {
+
+        DriverManager.get("https://ia.ca/individuals");
+
+        ReqResBasePO main = new ReqResBasePO();
+        main.openIndividualsTab()
+                .clickLoans()
+                .clickMortgagesLoan()
+                .clickCalculatePayment()
+                .clickMortgageAmountRadioValue()
+                .clickPurchasePriceRadioValue()
+                .clearMortAmountORpurchePriceInput()
+                .typeIntoMortAmountORpurchePriceInput("1293073")
+                .typeIntoDownPaymentInput("50")
+                .selectAmortizationByVisibleText("15 years")
+                .typeIntoInterestRateInput("6")
+                .clickCalculateButton()
+                .getDownPaymenError();
+
+//
+
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+
+    }
 
 
 }

@@ -13,7 +13,7 @@ public class DropDown extends Element {
     }
 
 
-    private String dropDownValue = "./..//li[normalize-space()='%s']";
+    private final String dropDownValue = "./..//li[normalize-space()='%s']";
 
 
     public void selectByVisibleText(String text) {

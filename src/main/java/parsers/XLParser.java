@@ -1,7 +1,7 @@
 package parsers;
 
 import models.api.reqres.User;
-import org.apache.poi.hssf.usermodel.HSSFWorkbook;
+
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -32,10 +32,13 @@ public class XLParser {
         while (it.hasNext()) {
             Row row = it.next();
             Iterator<Cell> cells = row.iterator();
+
             while (cells.hasNext()) {
-                Cell cell = cells.next();
-                Cell cell2= cells.next();
-                users.add(new User(cell.getStringCellValue(), cell2.getStringCellValue()));
+//                System.out.println(cells.next());
+//                Cell cell = cells.next();
+//                System.out.println(cells.next());
+//                Cell cell2= cells.next();
+                users.add(new User(cells.next().toString(), cells.next().toString()));
 
             }
             result += "\n";

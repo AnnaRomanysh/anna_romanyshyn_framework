@@ -1,11 +1,16 @@
 package ui.driver;
+
 import enums.Drivers;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.opera.OperaDriver;
 import parsers.PropertiesReader;
+import ui.wait.Wait;
+
+import java.util.concurrent.TimeUnit;
 
 class DriverFactory {
     private static WebDriver driver;
@@ -40,6 +45,7 @@ class DriverFactory {
 
         }
         driver.manage().window().maximize();
+//        Wait.implicityWait(10, TimeUnit.SECONDS);
         return driver;
     }
 
