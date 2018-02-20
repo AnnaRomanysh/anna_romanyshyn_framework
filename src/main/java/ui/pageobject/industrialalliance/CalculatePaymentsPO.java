@@ -1,5 +1,5 @@
 package ui.pageobject.industrialalliance;
-import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.support.FindBy;
 import ui.element.*;
 
@@ -51,20 +51,15 @@ public class CalculatePaymentsPO extends ReqResBasePO {
     private TextArea paymentResult;
 
 
-
-
     public CalculatePaymentsPO clickPurchasePriceRadioValue() {
         info("Choose 'Purchase price' radio value ");
-            purchasePriceRadioValue.click();
+        purchasePriceRadioValue.click();
         return this;
     }
 
     public CalculatePaymentsPO clickMortgageAmountRadioValue() {
         info("Choose 'Mortgage amount' radio value ");
-
-
-            mortgageAmountRadioValue.click();
-
+        mortgageAmountRadioValue.click();
         return this;
     }
 
@@ -74,9 +69,9 @@ public class CalculatePaymentsPO extends ReqResBasePO {
         return this;
     }
 
-    public CalculatePaymentsPO typeIntoMortAmountORpurchePriceInput(String mortgageAmount) {
+    public CalculatePaymentsPO typeMortAmountORpurchePriceInput(int mortgageAmount) {
         info("Type: " + mortgageAmount + " into Mortrage amount/purchace price input");
-        mortAmountAndPurchePriceInput.sendKeys(mortgageAmount);
+        mortAmountAndPurchePriceInput.sendKeys(mortgageAmount+"");
         return this;
     }
 
@@ -89,7 +84,7 @@ public class CalculatePaymentsPO extends ReqResBasePO {
 
     public CalculatePaymentsPO moveDownPaymentSliderToDefaultValue() {
         info("Move Down Payment slider to default value");
-      downPaymenSlider.moveByCoorginats(100, 0);
+        downPaymenSlider.moveByCoorginats(100, 0);
         return this;
 
     }
@@ -108,9 +103,9 @@ public class CalculatePaymentsPO extends ReqResBasePO {
         return this;
     }
 
-    public CalculatePaymentsPO typeIntoDownPaymentInput(String downPayment) {
+    public CalculatePaymentsPO typeDownPaymentInput(int downPayment) {
         info("Type: " + downPayment + " into down payment input");
-        downPaymentInput.sendKeys(downPayment);
+        downPaymentInput.sendKeys(downPayment+"");
         return this;
     }
 
@@ -132,9 +127,9 @@ public class CalculatePaymentsPO extends ReqResBasePO {
         return this;
     }
 
-    public CalculatePaymentsPO typeIntoInterestRateInput(String interestRate) {
+    public CalculatePaymentsPO typeInterestRateInput(int interestRate) {
         info("Type " + interestRate + " % into interest rate input");
-        interestRateInput.sendKeys(interestRate);
+        interestRateInput.sendKeys(interestRate+"");
         return this;
     }
 
@@ -144,67 +139,63 @@ public class CalculatePaymentsPO extends ReqResBasePO {
         return this;
     }
 
-    public WebElement getPurchasePriceRadioValue() {
+    public Button getPurchasePriceRadioValue() {
         return purchasePriceRadioValue;
     }
 
-    public WebElement getMortgageAmountRadioValue() {
+    public Button getMortgageAmountRadioValue() {
         return mortgageAmountRadioValue;
     }
 
-    public WebElement getMortAmountAndPurchePriceInput() {
+    public Input getMortAmountAndPurchePriceInput() {
         return mortAmountAndPurchePriceInput;
     }
 
-    public WebElement getDownPaymentInput() {
+    public Input getDownPaymentInput() {
         return downPaymentInput;
     }
 
-    public WebElement getMortAmountAndPurchPriceSlider() {
+    public Slider getMortAmountAndPurchPriceSlider() {
         return mortAmountAndPurchPriceSlider;
     }
 
-    public WebElement getDownPaymenSlider() {
+    public Slider getDownPaymenSlider() {
         return downPaymenSlider;
     }
 
-    public WebElement getMortAmountAndPurchPriceInnerInput() {
+    public Input getMortAmountAndPurchPriceInnerInput() {
         return mortAmountAndPurchPriceInnerInput;
     }
 
-    public WebElement getDownPaymenInnerInput() {
+    public Input getDownPaymenInnerInput() {
         return downPaymenInnerInput;
     }
 
-    public WebElement getDownPaymenError() {
+    public TextArea getDownPaymenError() {
         return downPaymenError;
     }
 
-    public WebElement getAmortizationDropdown() {
+    public DropDown getAmortizationDropdown() {
         return amortizationDropdown;
     }
 
-    public WebElement getSliderMiseDeFond() {
+    public TextArea getSliderMiseDeFond() {
         return sliderMiseDeFond;
     }
 
-    public WebElement getPaymentFrequencyDropdown() {
+    public DropDown getPaymentFrequencyDropdown() {
         return paymentFrequencyDropdown;
     }
 
-    public WebElement getInterestRateInput() {
+    public Input getInterestRateInput() {
         return interestRateInput;
     }
 
-    public WebElement getCalculateButton() {
+    public Button getCalculateButton() {
         return calculateButton;
     }
 
-    public WebElement getPaymentResult() {
+    public TextArea getPaymentResult() {
         return paymentResult;
     }
-
-//    public String getDropDownValue() {
-//        return dropDownValue;
-//    }
 }

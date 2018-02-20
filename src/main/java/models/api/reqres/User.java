@@ -1,5 +1,9 @@
 package models.api.reqres;
 
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "user")
 public class User {
     private String name;
     private String job;
@@ -11,10 +15,15 @@ public class User {
         this.job = job;
     }
 
+    public User() {
+
+    }
+
     public String getName() {
         return name;
     }
 
+    @XmlElement(name = "name")
     public void setName(String name) {
         this.name = name;
     }
@@ -23,6 +32,7 @@ public class User {
         return job;
     }
 
+    @XmlElement(name = "job")
     public void setJob(String job) {
         this.job = job;
     }

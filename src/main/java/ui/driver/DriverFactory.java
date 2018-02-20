@@ -12,6 +12,7 @@ import ui.wait.Wait;
 
 import java.util.concurrent.TimeUnit;
 
+
 class DriverFactory {
     private static WebDriver driver;
     private static String browserName;
@@ -45,7 +46,7 @@ class DriverFactory {
 
         }
         driver.manage().window().maximize();
-//        Wait.implicityWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         return driver;
     }
 

@@ -23,10 +23,11 @@ public class Testing extends BaseTest {
                 .clickMortgageAmountRadioValue()
                 .clickPurchasePriceRadioValue()
                 .clearMortAmountORpurchePriceInput()
-                .typeIntoMortAmountORpurchePriceInput("1293073")
-                .typeIntoDownPaymentInput("50")
+                .typeIntoMortAmountORpurchePriceInput(1293073)
+                .typeIntoDownPaymentInput(50)
                 .selectAmortizationByVisibleText("15 years")
-                .typeIntoInterestRateInput("6")
+                .clearInterestRateInput()
+                .typeIntoInterestRateInput(6)
                 .clickCalculateButton()
                 .getDownPaymenError();
 
@@ -53,10 +54,10 @@ public class Testing extends BaseTest {
                 .clickMortgageAmountRadioValue()
                 .clickPurchasePriceRadioValue()
                 .clearMortAmountORpurchePriceInput()
-                .typeIntoMortAmountORpurchePriceInput("1293073")
-                .typeIntoDownPaymentInput("50")
+                .typeIntoMortAmountORpurchePriceInput(1293073)
+                .typeIntoDownPaymentInput(50)
                 .selectAmortizationByVisibleText("15 years")
-                .typeIntoInterestRateInput("6")
+                .typeIntoInterestRateInput(6)
                 .clickCalculateButton()
                 .getDownPaymenError();
 
@@ -70,36 +71,36 @@ public class Testing extends BaseTest {
 
 
     }
-    @Test
-    public void test2() {
-
-        DriverManager.get("https://ia.ca/individuals");
-
-        ReqResBasePO main = new ReqResBasePO();
-        main.openIndividualsTab()
-                .clickLoans()
-                .clickMortgagesLoan()
-                .clickCalculatePayment()
-                .clickMortgageAmountRadioValue()
-                .clickPurchasePriceRadioValue()
-                .clearMortAmountORpurchePriceInput()
-                .typeIntoMortAmountORpurchePriceInput("1293073")
-                .typeIntoDownPaymentInput("50")
-                .selectAmortizationByVisibleText("15 years")
-                .typeIntoInterestRateInput("6")
-                .clickCalculateButton()
-                .getDownPaymenError();
-
+//    @Test
+//    public void test2() {
 //
-
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
-
-    }
+//        DriverManager.get("https://ia.ca/individuals");
+//
+//        ReqResBasePO main = new ReqResBasePO();
+//        main.openIndividualsTab()
+//                .clickLoans()
+//                .clickMortgagesLoan()
+//                .clickCalculatePayment()
+//                .clickMortgageAmountRadioValue()
+//                .clickPurchasePriceRadioValue()
+//                .clearMortAmountORpurchePriceInput()
+//                .typeIntoMortAmountORpurchePriceInput("1293073")
+//                .typeIntoDownPaymentInput("50")
+//                .selectAmortizationByVisibleText("15 years")
+//                .typeIntoInterestRateInput("6")
+//                .clickCalculateButton()
+//                .getDownPaymenError();
+//
+////
+//
+//        try {
+//            Thread.sleep(5000);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+//
+//
+//    }
 
 
 }

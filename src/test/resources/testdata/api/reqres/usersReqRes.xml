@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Users>
+    <user>
+        <name>Andrew</name>
+        <job>Developer</job>
+    </user>
+    <user>
+        <name>Adam</name>
+        <job>Manager</job>
+    </user>
+    <user>
+        <name>Linda</name>
+        <job>QA</job>
+    </user>
+
+    <user>
+        <name>Lara</name>
+        <job>BI</job>
+    </user>
+    <user>
+        <name>Nick</name>
+        <job>BA</job>
+    </user>
+</Users>
