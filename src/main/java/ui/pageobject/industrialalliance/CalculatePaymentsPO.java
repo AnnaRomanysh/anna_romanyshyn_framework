@@ -2,6 +2,7 @@ package ui.pageobject.industrialalliance;
 
 import org.openqa.selenium.support.FindBy;
 import ui.element.*;
+import ui.wait.Wait;
 
 public class CalculatePaymentsPO extends ReqResBasePO {
 
@@ -38,7 +39,7 @@ public class CalculatePaymentsPO extends ReqResBasePO {
     @FindBy(xpath = "//*[@id='sliderMiseDeFond']")
     private TextArea sliderMiseDeFond;
 
-    @FindBy(xpath = "//*[contains(@for, 'Amortissement')]//..//*[contains(@class,'selectric-wrapper')]")
+    @FindBy(xpath = "//*[contains(@for, 'FrequenceVersement')]//following::*[@class='selectric']")
     private DropDown paymentFrequencyDropdown;
 
     @FindBy(xpath = "//*[@id='TauxInteret']")
@@ -49,6 +50,7 @@ public class CalculatePaymentsPO extends ReqResBasePO {
 
     @FindBy(xpath = "//*[@id='paiement-resultats']")
     private TextArea paymentResult;
+
 
 
     public CalculatePaymentsPO clickPurchasePriceRadioValue() {
@@ -71,30 +73,30 @@ public class CalculatePaymentsPO extends ReqResBasePO {
 
     public CalculatePaymentsPO typeMortAmountORpurchePriceInput(int mortgageAmount) {
         info("Type: " + mortgageAmount + " into Mortrage amount/purchace price input");
-        mortAmountAndPurchePriceInput.sendKeys(mortgageAmount+"");
+        mortAmountAndPurchePriceInput.sendKeys(mortgageAmount + "");
         return this;
     }
 
-    public CalculatePaymentsPO moveMortAmountORpurcePriceSliderToDefaultValue() {
+    public CalculatePaymentsPO moveMortAmountORpurcePriceSliderToValue(int value) {
         info("Move Mortrage amount/purchace price slider to default value");
-        mortAmountAndPurchPriceSlider.moveByCoorginats(100, 0);
+        mortAmountAndPurchPriceSlider.moveByCoorginats(value, 0);
         return this;
 
     }
 
-    public CalculatePaymentsPO moveDownPaymentSliderToDefaultValue() {
+    public CalculatePaymentsPO moveDownPaymentSliderToValue(int value) {
         info("Move Down Payment slider to default value");
-        downPaymenSlider.moveByCoorginats(100, 0);
+        downPaymenSlider.moveByCoorginats(value, 0);
         return this;
 
     }
 
-    public String getMortAmountORPurchePriceValue() {
-        return mortAmountAndPurchPriceInnerInput.getAttribute("value");
+    public int getMortAmountORPurchePriceValue() {
+        return Integer.parseInt(mortAmountAndPurchPriceInnerInput.getAttribute("value"));
     }
 
-    public String getdownPaymenInnerValue() {
-        return downPaymenInnerInput.getAttribute("value");
+    public int getdownPaymenValue() {
+        return Integer.parseInt(downPaymenInnerInput.getAttribute("value"));
     }
 
     public CalculatePaymentsPO clearDownPaymentInput() {
@@ -105,18 +107,20 @@ public class CalculatePaymentsPO extends ReqResBasePO {
 
     public CalculatePaymentsPO typeDownPaymentInput(int downPayment) {
         info("Type: " + downPayment + " into down payment input");
-        downPaymentInput.sendKeys(downPayment+"");
+        downPaymentInput.sendKeys(downPayment + "");
         return this;
     }
 
     public CalculatePaymentsPO selectAmortizationByVisibleText(String amortizationValue) {
         info("Select amortization: " + amortizationValue);
+        Wait.waitToBeVisible(30, amortizationDropdown);
         amortizationDropdown.selectByVisibleText(amortizationValue);
         return this;
     }
 
     public CalculatePaymentsPO selectPaymentFrequencyByVisibleText(String paymentFrequency) {
         info("Select payment frequency: " + paymentFrequency);
+        Wait.waitToBeVisible(30, paymentFrequencyDropdown);
         paymentFrequencyDropdown.selectByVisibleText(paymentFrequency);
         return this;
     }
@@ -129,7 +133,7 @@ public class CalculatePaymentsPO extends ReqResBasePO {
 
     public CalculatePaymentsPO typeInterestRateInput(int interestRate) {
         info("Type " + interestRate + " % into interest rate input");
-        interestRateInput.sendKeys(interestRate+"");
+        interestRateInput.sendKeys(interestRate + "");
         return this;
     }
 
@@ -196,6 +200,7 @@ public class CalculatePaymentsPO extends ReqResBasePO {
     }
 
     public TextArea getPaymentResult() {
+        Wait.waitToBeVisible(30, paymentResult);
         return paymentResult;
     }
 }

@@ -2,6 +2,7 @@ package ui.pageobject.industrialalliance;
 import org.openqa.selenium.support.FindBy;
 import ui.element.Button;
 import ui.element.Checkbox;
+import ui.element.TextArea;
 import ui.pageobject.BasePO;
 
 
@@ -54,6 +55,19 @@ public class ReqResBasePO extends BasePO {
     @FindBy(xpath = "//*[@heading='Boolean checkboxes demo' ]")
     private Checkbox f;
 
+
+    //    mob
+    @FindBy(xpath = "//*[@id='toggle-menu']")
+    private TextArea menu;
+
+    public IndividualsTabPO clickMenu(){
+        menu.click();
+        return new IndividualsTabPO();
+    }
+
+
+
+//
 
 
 }
